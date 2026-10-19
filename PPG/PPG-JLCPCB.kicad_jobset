@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "version": 1
+  },
+  "jobs": [
+    {
+      "id": "a7c1e4b2-3d58-4f90-9a11-6b2c8e0d4f17",
+      "type": "pcb_export_gerbers",
+      "description": "JLCPCB Gerbers",
+      "settings": {
+        "output_filename": "./",
+        "layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu",
+          "F.Paste",
+          "B.Paste",
+          "F.SilkS",
+          "B.SilkS",
+          "F.Mask",
+          "B.Mask",
+          "Edge.Cuts"
+        ],
+        "layers_to_include_on_all_layers": [],
+        "use_protel_file_extension": true,
+        "use_x2_format": true,
+        "include_netlist_attributes": true,
+        "disable_aperture_macros": false,
+        "create_gerber_job_file": false,
+        "subtract_solder_mask_from_silk": true,
+        "check_zones": true,
+        "plot_ref_des": true,
+        "plot_footprint_values": false,
+        "plot_drawing_sheet": false,
+        "plot_pad_numbers": false,
+        "use_drill_origin": false,
+        "precision": 6,
+        "mirror": false,
+        "negative": false,
+        "black_and_white": true,
+        "drill_shape": "full",
+        "hide_dnp_footprints_on_fab_layers": false,
+        "sketch_dnp_footprints_on_fab_layers": false,
+        "crossout_dnp_footprints_on_fab_layers": false,
+        "sketch_pads_on_fab_layers": false,
+        "drawing_sheet": ""
+      }
+    },
+    {
+      "id": "b8d2f5c3-4e69-4011-ab22-7c3d9f1e5028",
+      "type": "pcb_export_drill",
+      "description": "JLCPCB drills",
+      "settings": {
+        "output_dir": "./",
+        "format": "excellon",
+        "drill_origin": "abs",
+        "units": "mm",
+        "zero_format": "decimal",
+        "excellon.combine_pth_npth": false,
+        "excellon.minimal_header": false,
+        "excellon.mirror_y": false,
+        "excellon.oval_drill_route": false,
+        "generate_map": false,
+        "generate_report": false,
+        "generate_tenting": false,
+        "map_format": "pdf",
+        "gerber_precision": 6
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "c9e306d4-5f70-4122-bc33-8d4e0a2f6139",
+      "type": "archive",
+      "description": "JLCPCB zip",
+      "only": [
+        "a7c1e4b2-3d58-4f90-9a11-6b2c8e0d4f17",
+        "b8d2f5c3-4e69-4011-ab22-7c3d9f1e5028"
+      ],
+      "settings": {
+        "output_path": "${KIPRJMOD}/fab/PPG-jlcpcb.zip",
+        "format": "zip"
+      }
+    },
+    {
+      "id": "d0f417e5-6081-4233-cd44-9e5f1b30724a",
+      "type": "folder",
+      "description": "Unpacked Gerbers",
+      "only": [
+        "a7c1e4b2-3d58-4f90-9a11-6b2c8e0d4f17",
+        "b8d2f5c3-4e69-4011-ab22-7c3d9f1e5028"
+      ],
+      "settings": {
+        "output_path": "${KIPRJMOD}/fab/jlcpcb"
+      }
+    }
+  ]
+}

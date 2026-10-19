@@ -1,0 +1,5 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "PPG") (type "KiCad") (uri "${KIPRJMOD}/lib/PPG.pretty") (options "") (descr "PPG project footprints"))
+	(lib (name "polyCMUT") (type "KiCad") (uri "${KIPRJMOD}/library/polyCMUT.pretty") (options "") (descr "polyCMUT module footprint for host boards"))
+)
